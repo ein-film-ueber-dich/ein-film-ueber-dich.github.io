@@ -433,6 +433,39 @@ gap: 5px;
       color: var(--muted);
     }
 
+    .about-photo {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+    .about-author {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.author-photo {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.author-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
     .values {
       display: grid;
       gap: 16px;
@@ -658,6 +691,15 @@ gap: 5px;
         gap: 22px;
       }
 
+      .about-author {
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.author-photo {
+  max-width: 320px;
+}
+      
       .section-heading {
         margin-bottom: 30px;
       }
@@ -1064,28 +1106,36 @@ gap: 5px;
     <section class="content-section" id="ueber-mich">
       <div class="container about-grid">
 
-        <div>
-          <p class="eyebrow">Der Mensch hinter der Kamera</p>
+        <div class="about-author">
 
-          <h2>Warum ein Film über dich?</h2>
+  <div class="author-photo">
+    <img src="IMG_8830.jpeg" alt="Andrey Raduga – der Mensch hinter der Kamera">
+  </div>
 
-          <p>
-            Ich bin Andrey Raduga. Mich interessiert nicht nur,
-            was ein Mensch erlebt hat, sondern auch, was ihn geprägt
-            hat und was er anderen Menschen mitgeben möchte.
-          </p>
+  <div>
+    <p class="eyebrow">Der Mensch hinter der Kamera</p>
 
-          <p>
-            Ein persönlicher Film kann Erinnerungen bewahren,
-            Familien näher zusammenbringen und Werte für die
-            nächste Generation sichtbar machen.
-          </p>
+    <h2>Warum ein Film über dich?</h2>
 
-          <p>
-            Gemeinsam überlegen wir, welche Geschichte erzählt
-            werden soll und welche Form am besten zu dir passt.
-          </p>
-        </div>
+    <p>
+      Ich bin Andrey Raduga. Mich interessiert nicht nur,
+      was ein Mensch erlebt hat, sondern auch, was ihn geprägt
+      hat und was er anderen Menschen mitgeben möchte.
+    </p>
+
+    <p>
+      Ein persönlicher Film kann Erinnerungen bewahren,
+      Familien näher zusammenbringen und Werte für die
+      nächste Generation sichtbar machen.
+    </p>
+
+    <p>
+      Gemeinsam überlegen wir, welche Geschichte erzählt
+      werden soll und welche Form am besten zu dir passt.
+    </p>
+  </div>
+
+</div>
 
         <div class="values">
 
