@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sana Özel Bir Film – Hikâyen, ailen ve mirasın</title>
+
+  <meta name="description" content="Kişisel bir filmle yaşamını, aileni, deneyimlerini ve aktarmak istediklerini koru.">
+
+  <meta name="theme-color" content="#171714">
+
+  <style>
+    :root {
+      --bg: #171714;
+      --bg-light: #22221e;
+      --text: #f8f5ee;
+      --muted: #d4d0c7;
+      --gold: #d8b879;
+      --line: rgba(255, 255, 255, 0.14);
+      --container: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    /* NAVIGATION */
+
+    header {
+  position: absolute;
+  top: 12px;
+  width: 100%;
+  z-index: 10;
+  background: transparent;
+  border-bottom: none;
+}
+    .nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+  transform: translateX(-40px);
+}
+    @media (min-width: 651px) {
+  .nav-links {
+  }
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+justify-content: center;
+gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 9px;
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 8px;
+  background: rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 0;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.08em;
+  transition: color 0.2s;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+    /* HERO / COVER */
+
+    .hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 0;
+
+  background-color: #24231f;
+  background-image: url("./hero-clean.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  border-bottom: 1px solid var(--line);
+}
+
+    .hero-content {
+  position: absolute;
+  top: 155px;
+  left: 5.8%;
+  width: min(650px, 48%);
+  margin: 0;
+  display: block;
+}
+
+.hero-text {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  transform: none;
+  background: none;
+}
+
+    .hero-features {
+  position: absolute !important;
+  z-index: 3;
+  left: calc(5.8% - 1cm) !important;
+  top: 55% !important;
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+      column-gap: 0;
+}
+
+.hero-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+  min-width: 0;
+  color: #fff;
+  text-decoration: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero-feature:last-child {
+  border-right: none;
+}
+
+    .hero-feature:first-child {
+  padding-left: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+    .hero-feature:first-child .feature-icon,
+.hero-feature:first-child h3,
+.hero-feature:first-child p {
+  width: 100%;
+  text-align: center;
+}
+
+.hero-feature:last-child {
+  border-right: none;
+}
+
+.feature-icon {
+  color: #e5bd72;
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.hero-feature h3 {
+  margin: 0 0 8px;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.hero-feature p {
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: bold;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+    }
+
+    .hero-text h1 {
+  margin: 0 0 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.8rem, 4.2vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.65);
+}
+
+.hero-text h1 span {
+  display: block;
+  margin-top: 12px;
+  color: var(--gold);
+  font-size: 0.62em;
+  line-height: 1.08;
+}
+
+    .hero-description {
+  max-width: 610px;
+  margin: 0 0 26px;
+  color: #f0ede6;
+  font-size: clamp(1rem, 1.35vw, 1.3rem);
+  line-height: 1.48;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75);
+}
+
+    .hero-note {
+      margin: 18px 0 0;
+      color: #e1ddd4;
+      font-size: 0.88rem;
+    }
+
+    /* BUTTONS */
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 19px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      font-size: 0.94rem;
+      font-weight: bold;
+      line-height: 1.35;
+      text-align: center;
+      text-decoration: none;
+      transition:
+        background 0.2s,
+        border-color 0.2s,
+        transform 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--gold);
+      color: #211e17;
+    }
+
+    .button-primary:hover {
+      background: #e8cc94;
+    }
+
+    .button-secondary {
+      background: rgba(20, 20, 18, 0.42);
+      color: white;
+      border-color: rgba(255, 255, 255, 0.55);
+    }
+
+    .button-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: white;
+    }
+
+    .button-outline {
+      color: var(--text);
+      border-color: var(--line);
+      background: transparent;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section.content-section {
+      padding: 82px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* FILM EXAMPLES */
+
+    /* HELLER HINTERGRUND FÜR FILMBEISPIELE */
+
+#filme {
+  background: #e8dfce;
+  color: #29251e;
+}
+
+#filme .section-heading p {
+  color: #5b554b;
+}
+
+#filme .film-card {
+  background: #f5efe4;
+  border-color: #d4c7b1;
+}
+
+#filme .film-info h3 {
+  color: #29251e;
+}
+
+#filme .film-info p {
+  color: #5b554b;
+}
+    .films {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px;
+    }
+
+    .film-card {
+      overflow: hidden;
+      background: var(--bg-light);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #080808;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .film-info {
+      padding: 22px;
+    }
+
+    .film-info h3 {
+      margin: 0 0 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.45rem;
+      font-weight: 400;
+    }
+
+    .film-info p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 52px;
+      align-items: start;
+    }
+
+    .about-grid h2 {
+      margin-top: 0;
+    }
+
+    .about-grid p {
+      color: var(--muted);
+    }
+
+    .about-photo {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+    .about-author {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.author-photo {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.author-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+    .values {
+      display: grid;
+      gap: 16px;
+    }
+
+    .value {
+      padding: 20px 22px;
+      border-left: 2px solid var(--gold);
+      background: var(--bg-light);
+    }
+
+    .value h3 {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+      font-weight: bold;
+    }
+
+    .value p {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      text-align: center;
+      background:
+        radial-gradient(
+          ellipse at top,
+          rgba(216, 184, 121, 0.09),
+          transparent 65%
+        ),
+        var(--bg);
+    }
+
+    .contact-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .contact-inner > p {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .contact-buttons {
+      justify-content: center;
+    }
+
+    .contact-note {
+      margin-top: 26px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 25px 0;
+      color: #aaa69d;
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* TABLETS AND PHONES */
+
+    @media (max-width: 1300px) {
+      .nav {
+        min-height: 70px;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 0.82rem;
+      }
+
+      .hero {
+        min-height: calc(100svh - 70px);
+        background-position: 42% center;
+      }
+
+      .hero-text {
+        width: min(540px, 64%);
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 5.5vw, 3.8rem);
+      }
+            .hero-content {
+        top: 130px;
+        width: min(600px, 58%);
+      }
+
+      .hero-features {
+        left: 3% !important;
+        top: auto !important;
+        bottom: 28px;
+        width: min(900px, calc(100% - 32px));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        row-gap: 20px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: calc(100% - 32px);
+      }
+
+            .nav {
+        position: relative;
+        min-height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 8px 0;
+        gap: 12px;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+            .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: min(320px, calc(100vw - 32px));
+        padding: 12px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        flex-wrap: nowrap;
+        white-space: normal;
+        overflow: visible;
+        background: rgba(25, 25, 23, 0.97);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        z-index: 11;
+      }
+
+      .nav-links a {
+        font-size: 0.78rem;
+      }
+
+      .hero {
+        min-height: calc(100svh - 100px);
+        align-items: flex-end;
+        padding: 36px 0;
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(15, 15, 13, 0.02) 0%,
+            rgba(15, 15, 13, 0.15) 25%,
+            rgba(15, 15, 13, 0.76) 53%,
+            rgba(15, 15, 13, 0.94) 100%
+          ),
+          url("./hero-clean.png");
+        background-position: 38% center;
+      }
+
+      .hero-content {
+        justify-content: center;
+      }
+
+      .hero-text {
+        width: 100%;
+        text-align: center;
+      }
+
+      .eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+      }
+
+      h1 {
+        font-size: clamp(2.25rem, 9vw, 3.3rem);
+        margin-bottom: 16px;
+      }
+
+      .hero-description {
+        margin: 0 auto 22px;
+        font-size: 1rem;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .button {
+        min-height: 46px;
+        padding: 11px 14px;
+        font-size: 0.9rem;
+      }
+
+      .hero-note {
+        font-size: 0.82rem;
+      }
+
+      section.content-section {
+        padding: 58px 0;
+      }
+
+      .films,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .about-author {
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.author-photo {
+  max-width: 320px;
+}
+
+      .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .film-info {
+        padding: 18px;
+      }
+
+            .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        position: relative;
+        min-height: 60px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 8px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 12;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: min(320px, calc(100vw - 32px));
+        padding: 12px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        flex-wrap: nowrap;
+        background: rgba(25, 25, 23, 0.97);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        z-index: 11;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 8px;
+        font-size: 0.95rem;
+        white-space: normal;
+      }
+    }
+        @media (max-width: 650px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+}
+        @media (max-width: 650px) {
+      .hero {
+        min-height: auto;
+        background-position: 65% top;
+        padding: 0 0 28px;
+      }
+
+      .hero-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: calc(100% - 32px);
+        margin: 240px auto 24px;
+      }
+
+      .hero-features {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: calc(100% - 32px);
+        margin: 0 auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 24px;
+      }
+    }
+
+        @media (max-width: 900px) {
+      .hero {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+        padding-bottom: 28px;
+      }
+      .hero-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: min(650px, calc(100% - 40px));
+        margin: 180px auto 24px;
+      }
+      .hero-features {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        width: min(650px, calc(100% - 40px));
+        margin: 0 auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 0;
+        row-gap: 24px;
+      }
+    }
+    @media (max-width: 650px) {
+      .hero {
+        padding-bottom: 28px;
+        background-position: 65% top;
+      }
+      .hero-content {
+        width: calc(100% - 32px);
+        margin: 200px auto 24px;
+      }
+      .hero-text {
+        width: 100%;
+        text-align: left;
+      }
+      .hero-content .buttons {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+      .hero-features {
+        width: calc(100% - 32px);
+        margin: 0 auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 28px;
+      }
+    }
+
+@media (min-width: 651px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-description {
+  width: 460px;
+  max-width: 100%;
+}
+
+  .hero-text h1 {
+    white-space: normal;
+  }
+
+  .hero-text h1 > br:first-of-type {
+    display: none;
+  }
+
+  .hero-text h1 > span {
+    display: block;
+  }
+}
+    @media (min-width: 651px) and (max-width: 1400px) {
+  .hero-gold-lines i:last-child {
+    white-space: nowrap;
+  }
+}
+    @media (min-width: 651px) and (max-width: 1400px) and (orientation: landscape) {
+  .hero {
+    display: block;
+    min-height: 100svh;
+    padding-bottom: 0;
+  }
+
+  .hero-features {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 20px !important;
+    left: 4% !important;
+    width: 92% !important;
+    margin: 0 !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 12px;
+    row-gap: 0;
+  }
+
+  .hero-feature {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+    .site-signature {
+  position: absolute;
+  left: 5.8%;
+  top: 22px;
+  z-index: 11;
+  color: #fff;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(30px, 3.3vw, 46px);
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  transform: none;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+  <nav class="container nav" aria-label="Ana navigasyon">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menüyü aç">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links" id="nav-links">
+      <a href="projekt.html">Proje</a>
+      <a href="ablauf.html">Süreç</a>
+      <a href="rechtliches.html">Yasal Bilgiler ve Sözleşme</a>
+      <a href="#kontakt">İletişim</a>
+    </div>
+  </nav>
+</header>
+
+  <main>
+
+    <!-- HERO / STARTSEITE -->
+
+    <section class="hero" id="start">
+      <div class="container hero-content">
+        <div class="hero-text">
+
+  <h1>
+  Sana Özel Bir Film.<br>
+  <span class="hero-gold-lines"><i>Hikâyen.</i> <i>Ailen.</i> <i>Mirasın.</i></span>
+</h1>
+
+  <p class="hero-description">
+    Herkesin anlatılmaya değer bir hikâyesi vardır. Yaşamını, değerlerini ve özel anlarını koruyan kişisel filmler hazırlıyorum; bunlar ailen ve gelecek kuşaklar için kalıcı birer anı olur.
+  </p>
+
+  <div class="buttons">
+    <a class="button button-primary" href="https://wa.me/491758269967" target="_blank" rel="noopener noreferrer">
+      WhatsApp üzerinden yaz
+    </a>
+
+    <a class="button button-secondary" href="mailto:AndreyRaduga@iCloud.com">
+      E-posta gönder
+    </a>
+  </div>
+
+    <p class="hero-note">
+    Mesajını bekliyorum.
+</p>
+
+        </div>
+      </div>
+
+      <div class="hero-features">
+
+  <a class="hero-feature" href="geschichte.html">
+    <span class="feature-icon">▧</span>
+    <h3>Hikâyen</h3>
+    <p>Kişisel bir film<br>yaşamını anlatır.</p>
+  </a>
+
+  <a class="hero-feature" href="familie.html">
+    <span class="feature-icon">♧</span>
+    <h3>Ailen</h3>
+    <p>Birlikte yaşanan ve<br>kalıcı olan anlar.</p>
+  </a>
+
+  <a class="hero-feature" href="werte.html">
+    <span class="feature-icon">♧</span>
+    <h3>Değerlerin</h3>
+    <p>Senin için önemli olanlar –<br>bugün ve yarın için.</p>
+  </a>
+
+  <a class="hero-feature" href="vermaechtnis.html">
+    <span class="feature-icon">∞</span>
+    <h3>Mirasın</h3>
+    <p>Kalıcı bir anı<br>gelecek kuşaklar için.</p>
+  </a>
+
+</div>
+
+    </section>
+
+    <!-- FILMBEISPIELE -->
+
+    <section class="content-section" id="filme">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Yaşamaya devam eden hikâyeler</p>
+
+          <h2>Film örnekleri</h2>
+
+          <p>
+            Çalışmalarımdan iki kişisel film örneği. Her yaşam farklı bir hikâye anlatır.
+          </p>
+        </div>
+
+        <div class="films">
+
+          <article class="film-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube-nocookie.com/embed/Cdy7NUfObV4" title="Christél. Yüzde 50 ile yaşamak" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="film-info">
+              <h3>Christél. Yüzde 50 ile yaşamak</h3>
+
+              <p>
+                Yaşam, deneyimler ve kişinin kendi yolu üzerine kişisel bir hikâye.
+              </p>
+            </div>
+          </article>
+
+          <article class="film-card">
+            <div class="video-wrapper">
+              <iframe src="https://www.youtube-nocookie.com/embed/OOfyrNzA_Cw" title="HJK. Hans-Jürgen Kuhlo hakkında" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              </iframe>
+            </div>
+
+            <div class="film-info">
+              <h3>HJK. Hans-Jürgen Kuhlo hakkında</h3>
+
+              <p>
+                Özel bir insanın yaşamına dair anılar ve izlenimler.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ÜBER MICH -->
+
+    <section class="content-section" id="ueber-mich">
+      <div class="container about-grid">
+
+        <div class="about-author">
+
+  <div class="author-photo">
+    <img src="IMG_8830.jpeg" alt="Kamera arkasındaki kişi: Andrey Raduga">
+  </div>
+
+  <div>
+    <p class="eyebrow">Kameranın arkasındaki kişi</p>
+
+    <h2>Neden sana özel bir film?</h2>
+
+    <p>
+      Ben Andrey Raduga. Bir insanın yalnızca neler yaşadığı değil, onu nelerin şekillendirdiği ve başkalarına neler aktarmak istediği de ilgimi çekiyor.
+    </p>
+
+    <p>
+      Kişisel bir film anıları koruyabilir, aileleri yakınlaştırabilir ve değerleri gelecek kuşaklara aktarabilir.
+    </p>
+
+    <p>
+      Hangi hikâyenin anlatılacağını ve sana en uygun biçimi birlikte düşünürüz.
+    </p>
+  </div>
+
+</div>
+
+        <div class="values">
+
+          <article class="value">
+            <h3>Hikâyen</h3>
+
+            <p>
+              Yaşadıkların, anıların ve dönüm noktaların merkezde yer alır.
+            </p>
+          </article>
+
+          <article class="value">
+            <h3>Değerlerin</h3>
+
+            <p>
+              Senin için önemli olanlar, öğrendiklerin ve aktarmak istediklerin.
+            </p>
+          </article>
+
+          <article class="value">
+            <h3>Saygı ve güvenle</h3>
+
+            <p>
+              Filmde nelerin yer alacağını ve nelerin özel kalması gerektiğini birlikte konuşuruz.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+
+    <section class="content-section contact-section" id="kontakt">
+      <div class="container contact-inner">
+
+        <p class="eyebrow">İlk adım</p>
+
+        <h2>Hikâyeni konuşalım.</h2>
+
+        <p>
+          Yaklaşık 30 dakikalık ilk görüşmede tanışır ve fikirlerini konuşuruz. Kapsamı, süreci ve ücreti birlikte önceden netleştiririz.
+        </p>
+
+                <div class="buttons contact-buttons">
+
+          <a class="button button-primary" href="https://wa.me/491758269967" target="_blank" rel="noopener noreferrer">
+            WhatsApp üzerinden iletişim
+          </a>
+
+          <a class="button button-secondary" href="mailto:AndreyRaduga@iCloud.com">
+            E-posta gönder
+          </a>
+
+        </div>
+
+        <p class="contact-note">
+          Hikâyeni tanımayı sabırsızlıkla bekliyorum.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Andrey Raduga · Sana Özel Bir Film</p>
+
+      <p>Kişisel hikâyeler. Anılar. Miras.</p>
+    </div>
+  </footer>
+
+    <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Menü öffnen" : "Menü schließen"
+      );
+      navLinks.classList.toggle("is-open", !isOpen);
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Menü öffnen");
+        navLinks.classList.remove("is-open");
+      });
+    });
+  </script>
+
+<script src="../language-switcher.js"></script>
+</body>
+</html>

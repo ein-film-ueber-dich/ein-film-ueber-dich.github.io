@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Твоя история жизни заслуживает того, чтобы её рассказали и сохранили для будущих поколений.">
+<title>Твоя история | Фильм о тебе</title>
+<style>
+:root{--bg:#111411;--panel:#1b201b;--text:#f4f1e9;--muted:#c4c4bb;--gold:#d5b36b;--border:rgba(213,179,107,.3);--max:1100px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.75 Arial,Helvetica,sans-serif}
+a{color:var(--gold)}
+a:hover{color:#f0d79c}
+main{width:min(900px,calc(100% - 40px));margin:0 auto;padding:62px 0 84px}
+.eyebrow{margin:0 0 12px;color:var(--gold);font-size:.82rem;font-weight:bold;letter-spacing:.14em;text-transform:uppercase}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25}
+h1{margin:0 0 20px;color:var(--gold);font-size:clamp(2.3rem,5vw,3.5rem);font-weight:400}
+h2{margin:0 0 18px;font-size:clamp(1.6rem,3vw,2.1rem);font-weight:400;color:var(--gold)}
+p{margin:0 0 18px}
+.intro{margin-bottom:42px;color:var(--muted);font-size:1.12rem;max-width:780px}
+.eyebrow,h1,.intro{
+max-width:780px;
+margin-left:auto;
+margin-right:auto;
+}
+.content-block{max-width:780px;padding:30px 34px;margin:0 auto 24px;background:var(--panel);border:1px solid var(--border);border-radius:8px}
+.content-block p:last-child{margin-bottom:0}
+.cta{max-width:780px;margin:24px auto 0;padding:34px;background:linear-gradient(135deg,#22251e,#171914);border:1px solid var(--border);border-radius:8px;text-align:center}
+.cta p{color:var(--muted)}
+.button{display:inline-block;margin:8px 8px 0;padding:12px 20px;border:1px solid var(--gold);border-radius:4px;color:var(--gold);text-decoration:none}
+.button.primary{background:var(--gold);color:#171914;font-weight:bold}
+footer{padding:26px 20px;border-top:1px solid var(--border);color:var(--muted);text-align:center;font-size:.9rem}
+footer p{margin:0 0 5px}
+@media(max-width:650px){body{font-size:16px}main{width:calc(100% - 28px);padding:40px 0 60px}.content-block,.cta{padding:23px 20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<main>
+<p class="eyebrow">Твой личный фильм о жизни</p>
+<h1>Твоя история</h1>
+<p class="intro">Одна жизнь. Множество событий. Уникальная история.</p>
+
+<section class="content-block">
+<h2>У каждого человека есть история</h2>
+<p>У каждого человека есть своя история — встречи, решения, испытания, опыт и особенные мгновения.</p>
+<p>Одни события сформировали нас, некоторые люди изменили нашу жизнь, а решения определили наш путь. И многое из того, что кажется нам привычным, может стать для других ценным воспоминанием и важным открытием.</p>
+</section>
+
+<section class="content-block">
+<h2>Твоя жизнь — больше, чем собрание воспоминаний</h2>
+<p>Это путь со взлётами и падениями, успехами и ошибками, надеждами, переменами и новыми началами.</p>
+<p>Возможно, ты захочешь рассказать, откуда ты родом, что повлияло на тебя, какие испытания ты преодолел и чем особенно гордишься сегодня.</p>
+<p>Возможно, есть встречи, события или решения, которыми ты хочешь поделиться.</p>
+</section>
+
+<section class="content-block">
+<h2>Твоя история заслуживает того, чтобы её рассказали</h2>
+<p>Вместе мы создадим фильм из твоих воспоминаний, мыслей, событий и личных посланий, который покажет твою индивидуальность.</p>
+<p>Речь не о том, чтобы показать идеальную жизнь. Важно рассказать о ней искренне и с уважением — такой, какой она была и какой ты сам её ощущаешь.</p>
+</section>
+
+<section class="content-block">
+<h2>Фильм для сегодня. Воспоминание для завтра.</h2>
+<p>Фильм поможет близким лучше узнать твою жизнь. Твои дети и внуки смогут лучше понять тебя даже тогда, когда уже не смогут задать тебе вопросы.</p>
+<p>Так смогут сохраниться твой голос, мысли, смех и воспоминания.</p>
+<p><strong>Твоя история уникальна и заслуживает того, чтобы её сохранить.</strong></p>
+</section>
+
+<section class="cta">
+<h2>Расскажи свою историю</h2>
+<p>Давай обсудим, как превратить твои воспоминания в личный фильм.</p>
+<a class="button primary" href="index.html#kontakt">Связаться</a>
+</section>
+
+<p style="text-align:center; margin-top:36px;">
+<a href="index.html">На главную</a>
+</p>
+</main>
+
+<footer>
+<p>© <span id="year"></span> Андрей Радуга · Фильм о тебе</p>
+<p>Личные истории. Воспоминания. Наследие.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+
+<script src="../language-switcher.js"></script>
+</body>
+</html>

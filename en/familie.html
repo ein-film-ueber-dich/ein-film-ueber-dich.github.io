@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Preserve your family story, memories and values for generations to come.">
+<title>Your Family | A Film About You</title>
+<style>
+:root{--bg:#111411;--panel:#1b201b;--text:#f4f1e9;--muted:#c4c4bb;--gold:#d5b36b;--border:rgba(213,179,107,.3);--max:1100px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.75 Arial,Helvetica,sans-serif}
+a{color:var(--gold)}
+a:hover{color:#f0d79c}
+main{width:min(900px,calc(100% - 40px));margin:0 auto;padding:62px 0 84px}
+.eyebrow{margin:0 0 12px;color:var(--gold);font-size:.82rem;font-weight:bold;letter-spacing:.14em;text-transform:uppercase}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.25}
+h1{margin:0 0 20px;color:var(--gold);font-size:clamp(2.3rem,5vw,3.5rem);font-weight:400}
+h2{margin:0 0 18px;font-size:clamp(1.6rem,3vw,2.1rem);font-weight:400;color:var(--gold)}
+p{margin:0 0 18px}
+.intro{margin-bottom:42px;color:var(--muted);font-size:1.12rem;max-width:780px}
+.eyebrow,h1,.intro{max-width:780px;margin-left:auto;margin-right:auto}
+.content-block{max-width:780px;padding:30px 34px;margin:0 auto 24px;background:var(--panel);border:1px solid var(--border);border-radius:8px}
+.content-block p:last-child{margin-bottom:0}
+.cta{max-width:780px;margin:24px auto 0;padding:34px;background:linear-gradient(135deg,#22251e,#171914);border:1px solid var(--border);border-radius:8px;text-align:center}
+.cta p{color:var(--muted)}
+.button{display:inline-block;margin:8px 8px 0;padding:12px 20px;border:1px solid var(--gold);border-radius:4px;color:var(--gold);text-decoration:none}
+.button.primary{background:var(--gold);color:#171914;font-weight:bold}
+footer{padding:26px 20px;border-top:1px solid var(--border);color:var(--muted);text-align:center;font-size:.9rem}
+footer p{margin:0 0 5px}
+@media(max-width:650px){body{font-size:16px}main{width:calc(100% - 28px);padding:40px 0 60px}.content-block,.cta{padding:23px 20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<main>
+<p class="eyebrow">Your roots and your family</p>
+<h1>Your Family</h1>
+<p class="intro">The people who are part of your life. Roots that connect generations.</p>
+
+<section class="content-block">
+<h2>A family is more than a shared name</h2>
+<p>A family is more than a shared background or name. It is made up of people, encounters, memories, love and the many small stories passed down through generations.</p>
+<p>Our families accompany us through life. Parents give us roots. Children bring new perspectives. Siblings, partners and other loved ones shape our paths in their own ways.</p>
+</section>
+
+<section class="content-block">
+<h2>Where we come from is part of who we are</h2>
+<p>You may want to talk about your parents and grandparents, your childhood, your home and the people who have been by your side.</p>
+<p>Perhaps there are family stories passed down only by word of mouth—stories about special events, difficult times, courageous decisions or people who should not be forgotten.</p>
+<p>The small things matter too: a family celebration, a familiar song, a special tradition, shared laughter or a phrase that has stayed with you throughout your life.</p>
+</section>
+
+<section class="content-block">
+<h2>Memories connect generations</h2>
+<p>A personal family film can show where a family comes from, what has shaped it and which values connect its members.</p>
+<p>You can share what your family means to you, which experiences you want to pass on and what you hope to give your children and grandchildren for their own journeys.</p>
+<p>Photographs, old letters, documents and other keepsakes can also become part of the film.</p>
+</section>
+
+<section class="content-block">
+<h2>A gift for the people closest to you</h2>
+<p>Imagine your children and grandchildren one day hearing your voice, discovering your memories and learning family stories they might otherwise never have known.</p>
+<p>What emerges is more than a film: a personal connection between past, present and future.</p>
+<p><strong>Family is not only where we come from. It is also what we leave for one another.</strong></p>
+</section>
+
+<section class="cta">
+<h2>Preserve your family story</h2>
+<p>Let’s preserve your family’s stories together for generations to come.</p>
+<a class="button primary" href="index.html#kontakt">Get in touch</a>
+</section>
+
+<p style="text-align:center; margin-top:36px;">
+<a href="index.html">Back to home</a>
+</p>
+</main>
+
+<footer>
+<p>© <span id="year"></span> Andrey Raduga · A Film About You</p>
+<p>Personal stories. Memories. Legacy.</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+<script src="../language-switcher.js"></script>
+
+</body>
+</html>
