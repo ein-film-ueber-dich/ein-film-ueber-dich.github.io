@@ -117,7 +117,7 @@
     trigger.setAttribute("aria-expanded", "false");
     if (returnFocus) trigger.focus();
   };
-  const openMenu = () => {
+  const openMenu = ({ focusCurrent = false } = {}) => {
     const mobileToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
     if (mobileToggle && navLinks) {
@@ -126,9 +126,12 @@
     }
     menu.hidden = false;
     trigger.setAttribute("aria-expanded", "true");
-    menu.querySelector(`[data-language="${current}"]`)?.focus();
+    if (focusCurrent) menu.querySelector(`[data-language="${current}"]`)?.focus();
   };
-  trigger.addEventListener("click", () => menu.hidden ? openMenu() : closeMenu());
+  trigger.addEventListener("click", (event) => {
+    if (menu.hidden) openMenu({ focusCurrent: event.detail === 0 });
+    else closeMenu();
+  });
   document.addEventListener("pointerdown", (event) => {
     if (!widget.contains(event.target)) closeMenu();
   });
@@ -141,12 +144,24 @@
       closeMenu({ returnFocus: true });
     } else if (event.key === "ArrowDown" || event.key === "ArrowUp" || event.key === "Home" || event.key === "End") {
       event.preventDefault();
-      const next = event.key === "Home" ? 0 : event.key === "End" ? options.length - 1 : (index + (event.key === "ArrowDown" ? 1 : -1) + options.length) % options.length;
+      const next = event.key === "Home"
+        ? 0
+        : event.key === "End"
+          ? options.length - 1
+          : index < 0
+            ? (event.key === "ArrowDown" ? 0 : options.length - 1)
+            : (index + (event.key === "ArrowDown" ? 1 : -1) + options.length) % options.length;
       options[next].focus();
-    } else if (event.key === "Tab" && !widget.contains(event.target)) closeMenu();
-  });
-  widget.addEventListener("focusout", (event) => {
-    if (!widget.contains(event.relatedTarget)) closeMenu();
+    } else if (event.key === "Tab") {
+      const active = document.activeElement;
+      const activeIndex = options.indexOf(active);
+      const leavesWidget = active === trigger
+        ? event.shiftKey
+        : activeIndex >= 0
+          ? (event.shiftKey ? activeIndex === 0 : activeIndex === options.length - 1)
+          : true;
+      if (leavesWidget) closeMenu();
+    }
   });
   document.querySelector(".menu-toggle")?.addEventListener("click", () => closeMenu());
 })();
