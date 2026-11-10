@@ -946,6 +946,49 @@ html[dir="rtl"] iframe,html[dir="rtl"] video,html[dir="rtl"] img{direction:ltr}
 html[dir="rtl"] .hero-text{text-align:end}
 html[dir="rtl"] .nav-links a{direction:rtl}
 @media(max-width:650px){html[dir="rtl"] .nav-links{transform:none}}
+
+@media (min-width: 901px) {
+  html[dir="rtl"] .hero-content {
+    inset-inline-start: auto;
+    right: auto;
+    left: auto;
+    align-self: flex-end;
+  }
+
+  html[dir="rtl"] .hero-content .buttons {
+    direction: ltr;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  html[dir="rtl"] .hero-content .buttons > .button {
+    direction: rtl;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+  html[dir="rtl"] .hero-content {
+    width: min(430px, 46%);
+  }
+}
+
+@media (min-width: 651px) and (max-width: 900px) {
+  html[dir="rtl"] .hero-content {
+    align-self: flex-end;
+    width: min(400px, calc(50% - 32px));
+    margin: 180px 0 24px 4%;
+  }
+
+  html[dir="rtl"] .hero-text {
+    width: 100%;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 900px) and (orientation: landscape) {
+  html[dir="rtl"] .hero-content {
+    margin-right: auto;
+  }
+}
 </style>
   <link rel="stylesheet" href="/assets/theme-cards.css?v=2">
 </head>
